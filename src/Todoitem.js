@@ -5,7 +5,7 @@ export class Todoitem extends Component {
      getStyle=()=>{
         return{
                 textDecoration: this.props.todo.completed ?'line-through' : 'none',
-                backgroundColor: '#f4f4f4',
+                backgroundColor: '#ffd7bc',
                 padding : '10px',
                 borderBottom: '6px #ffffff solid',
             };
@@ -27,7 +27,9 @@ export class Todoitem extends Component {
 }
 
 Todoitem.propTypes={
-    todo: propTypes.object.isRequired
+    todo: propTypes.object.isRequired,
+    markComplete: propTypes.func.isRequired,
+    delTask: propTypes.func.isRequired,
   }
 
   const btnStyle={
