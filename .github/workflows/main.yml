@@ -1,6 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+ This is a basic workflow to help you get started with Actions
 
-name: CI
+name: react deploy
 
 on: [push]
 
@@ -14,7 +14,20 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-      - name: Install Surge
-        run: npm install -g surge
+      
+      #Install Yarn
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+         cmd: install 
+     
+     #Build react with yarn
+      - name: Build react app
+        run: yarn build
+      
+     #Install surge
       - name: Run surge
-        run: surge ./build todoapp24-8-2020.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: npm install --global surge
+     
+     #Deploy surge
+      - name: Deploy surge 
+        run: surge ./build todoappreact.surge.sh --token ${{ secrets.SURGE_TOKEN }}
