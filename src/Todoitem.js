@@ -5,7 +5,8 @@ export class Todoitem extends Component {
      getStyle=()=>{
         return{
                 textDecoration: this.props.todo.completed ?'line-through' : 'none',
-                backgroundColor: '#ffd7bc',
+                backgroundColor: 'black',
+                color:'white';
                 padding : '10px',
                 borderBottom: '6px #ffffff solid',
             };
