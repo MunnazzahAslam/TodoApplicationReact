@@ -43,8 +43,8 @@ render(){
   return(
   <Router>
   <div className="app">
+  <div className="container">
   <Header/>
-     <div className="container">
   <Route exact path="/home" render={props=>(
 <React.Fragment>
   < br/>
