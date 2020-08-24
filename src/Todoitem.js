@@ -34,11 +34,11 @@ Todoitem.propTypes={
   }
 
   const btnStyle={
-      background: 'red',
+      background: 'whiye',
       borderRadius: '50%',
       border:'none',
       padding: '5px 8px',
-      color: 'white',
+      color: 'black',
       cursor: 'pointer',
       float: 'right'
   }

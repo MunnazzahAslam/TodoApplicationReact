@@ -47,7 +47,9 @@ render(){
   <Header/>
   <Route exact path="/home" render={props=>(
 <React.Fragment>
+  < br/>
   <AddTodo AddTodo={this.AddTodo}/>
+  <br/>
   <Todos todos={this.state.todos} markComplete={this.markComplete} delTask={this.delTask}/>
 </React.Fragment>)}/>
 <Route path="/about" component={About}/>
